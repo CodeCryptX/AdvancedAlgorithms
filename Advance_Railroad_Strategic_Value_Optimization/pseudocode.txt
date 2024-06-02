@@ -1,0 +1,30 @@
+function calcInt(s, e):
+    sum = 0
+    for i = s to e - 1:
+        for j = i + 1 to e:
+            sum += vals[i] * vals[j]
+    return sum
+
+function minInt(s, e, sp):
+    if s >= e:
+        return 0
+    if sp == 0:
+        return calcInt(s, e)
+
+    if dp[s][sp] is not calculated:
+        minVal = calcInt(s, e)
+        for p = s to e - 1:
+            intSplit = minInt(s, p, 0) + minInt(p + 1, e, sp - 1)
+            minVal = min(minVal, intSplit)
+        dp[s][sp] = minVal
+
+    return dp[s][sp]
+
+Input: n (number of depots), ms (maximum splits)
+Input: vals[n] (strategic values of depots)
+
+for i = 0 to n:
+    for j = 0 to ms:
+        dp[i][j] = -1
+
+output minInt(0, n - 1, ms)
