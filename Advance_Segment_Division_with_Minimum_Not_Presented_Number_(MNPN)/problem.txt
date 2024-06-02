@@ -1,0 +1,13 @@
+In the Advanced Data Structures course, Laiba, a diligent university student, received a challenging assignment in
+informatics. The task at hand is to manage an array A of length n by dividing it into k segments where k>1. The goal is to
+ensure that each segment shares the same property: they all have the Minimum Not Presented Number (MNPN).
+The MNPN, a concept crucial for data analysis, refers to the smallest non-negative integer that does not appear within
+the segment.
+Laiba seeks assistance in determining whether such a division is possible. If feasible, Laiba needs to identify a suitable
+division. However, if no such division exists, Laiba should report -1.
+For instance, in one scenario, Laiba could divide the array into segments such that the MNPN within each segment
+remains consistent. This entails careful selection of segment boundaries to ensure the property holds true. Laiba eagerly
+awaits guidance to navigate through this intriguing computational challenge.
+input: The first line of input has integer N, the next line contains N integers.
+output: output the number of segments followed by the range of the segments i.e. the starting and ending indices of
+segments.
