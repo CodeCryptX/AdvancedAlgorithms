@@ -1,0 +1,40 @@
+###Problem Description
+
+Abdullah is a freedom fighter, fighting against the occupant forces. As a part of his fighting strategy, his primary target
+is the destruction of railroads.
+In this problem, the task is to assist Abdullah to make best use of his limited resources. He has some information
+available from intelligence wing of his organization. First, the rail line is completely linear which means that there are
+no branches, no spurs. Next, the Intelligence wing has assigned a Strategic Importance to each depot which is an integer
+from 1 to 5. Moreover, a depot is of no use on its own, it only has value if it is connected to other depots. The Strategic
+Value of the entire railroad is calculated by adding up the products of the Strategic Values for every pair of depots that
+are connected, directly or indirectly, by the rail line. Consider the following railroad:
+
+The strategic value of above railroad is computed as: 4*5 + 4*1 + 4*2 + 5*1 + 5*2 + 1*2 = 49.
+Now, suppose that Abdullah only has enough resources for one attack. He cannot attack the depots themselves because
+they are too well defended. He must attack the rail line between depots, in the middle of the desert. Consider what
+would happen if Abdullah attacked this rail line right in the middle:
+
+The Strategic Value of the remaining railroad is 4*5 + 1*2 = 22. But, suppose Abdullah attacks between the 4 and 5
+depots:
+
+The Strategic Value of the remaining railroad is 5*1 + 5*2 + 1*2 = 17. This is the Abdullah's best option.
+Given a description of a railroad and the number of attacks that Abdullah can perform, figure out the smallest Strategic
+Value that he can achieve for that railroad.
+Input
+There will be several data sets. Each data set will begin with a line with two integers, n and m. n is the number of depots
+on the railroad (1≤n≤1000), and m is the number of attacks Abdullah has resources for (0≤m<n). On the next line will be
+n integers, each from 1 to 5, indicating the Strategic Value of each depot in order. End of input will be marked by a line
+with n=0 and m=0, which should not be processed.
+Output
+For each data set, output a single integer, indicating the smallest Strategic Value for the railroad that Abdullah can
+achieve with his attacks. Output each integer in its own line.
+
+Sample Input
+n b
+4 1
+4 5 1 2
+result=17
+n b
+4 2
+4 5 1 2
+result=2
