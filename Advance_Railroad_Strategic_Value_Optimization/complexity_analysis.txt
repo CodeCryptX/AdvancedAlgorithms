@@ -1,0 +1,24 @@
+**Time Complexity:**
+
+The time complexity of the algorithm can be analyzed as follows:
+
+1. **calcInt(s, e):**
+   - The nested loops iterate over all pairs of indices within the range [s, e) to calculate the interaction cost.
+   - The number of iterations for `i` ranges from `s` to `e - 1`, and for `j` it ranges from `i + 1` to `e`.
+   - This gives a total of approximately (e - s)^2 iterations for each call to `calcInt(s, e)`.
+   - Therefore, the time complexity of `calcInt(s, e)` is O((e - s)^2).
+
+2. **minInt(s, e, sp):**
+   - The function iterates over all possible split points `p` within the range [s, e) and recursively calculates the minimum interaction cost for each split.
+   - For each split point, it makes two recursive calls with different ranges, resulting in a binary tree-like recursion.
+   - Since each recursive call involves a range of size `e - s`, the total number of recursive calls at each level of the recursion tree is approximately O(e - s).
+   - The maximum depth of the recursion tree is bounded by `ms`, the maximum number of splits allowed.
+   - Therefore, the total number of recursive calls is O(ms * (e - s)).
+   - Each recursive call also involves a call to `calcInt(s, e)`, which has a time complexity of O((e - s)^2).
+   - Thus, the overall time complexity of `minInt(s, e, sp)` is O(ms * (e - s) * (e - s)^2) = O(ms * (e - s)^3).
+
+Overall, the dominant factor in the time complexity is the calculation of interaction costs in `calcInt(s, e)` and the recursive calls in `minInt(s, e, sp)`. The time complexity of the entire algorithm is therefore O(ms * (e - s)^3).
+
+**Space Complexity:**
+
+The space complexity is mainly determined by the memoization array `dp` and any additional space used by the recursive calls. The memoization array has a size of O(n * ms), and the recursion depth is at most `ms`. Therefore, the space complexity is O(n * ms) for the memoization array and O(ms) for the recursion stack, resulting in a total space complexity of O(n * ms).
