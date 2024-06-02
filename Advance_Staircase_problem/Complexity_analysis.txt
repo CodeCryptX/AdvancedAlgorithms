@@ -1,0 +1,7 @@
+The time complexity of the given solution can be analyzed as follows:
+
+1. **Time Complexity**: Let's denote `n` as the input value. For each value of `n`, the function `countCombinations` is called recursively with heights ranging from 1 to `n-1`. This results in a total of approximately \(1 + 2 + 3 + \ldots + (n-1) = \frac{n(n-1)}{2}\) recursive calls (the sum of the first \(n-1\) natural numbers). Each recursive call involves a constant amount of work, so the overall time complexity is \(O\left(\frac{n(n-1)}{2}\right) = O(n^2)\).
+
+2. **Space Complexity**: The space complexity of the given solution arises from the memoization array `memo`, which is a 2D array of size \(n \times n\). Therefore, the space complexity is \(O(n^2)\) as well.
+
+In summary, the time complexity and space complexity of the provided solution are both \(O(n^2)\).
