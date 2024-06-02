@@ -1,0 +1,31 @@
+function countCombinations(n, prevHeight, memo):
+    if n is 0:
+        return 1
+
+    if n < 0 or prevHeight is 0:
+        return 0
+
+    if memo[n][prevHeight] is not -1:
+        return memo[n][prevHeight]
+
+    combinations = 0
+
+    for height = 1 to min(n, prevHeight):
+        combinations += countCombinations(n - height, height - 1, memo)
+
+    memo[n][prevHeight] = combinations
+    return combinations
+
+function calculateCombinations(n):
+    memo = 2D array of size (n + 1) x n filled with -1
+
+    result = countCombinations(n, n - 1, memo)
+
+    return result
+
+Input: 
+n = ReadInteger()
+
+Output: 
+result = calculateCombinations(n)
+Print "Number of combinations for N =", n, ":", result
