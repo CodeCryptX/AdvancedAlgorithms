@@ -9,3 +9,4 @@ Laiba aims to avoid consecutive selections from the same row. The first hunter c
 participants without any additional constraints. The team can accommodate no more than N members.
 You are provided with the power level of each hunter, write an optimal solution of complexity O(N*M) that calculates
 the maximum power that the newly arranged team can have.
+
