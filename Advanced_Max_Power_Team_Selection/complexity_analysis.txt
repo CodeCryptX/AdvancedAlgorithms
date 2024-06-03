@@ -1,0 +1,16 @@
+
+1. **Time Complexity**:
+   - Initializing the `dp` array: O(M * N), where M is the number of rows and N is the number of columns.
+   - Calculating the maximum power level column by column: O(M * N^2), as for each column, we iterate through each cell in the column (O(M)) and for each cell, we find the highest and second highest values from the previous column (O(M)).
+   - Finding the maximum power level from the last column of `dp`: O(M), as we iterate through each cell in the last column.
+   
+   Therefore, the overall time complexity is O(M * N^2).
+
+2. **Space Complexity**:
+   - `dp` array: O(M * N) for storing the maximum power levels.
+   - `hunters` array: O(M * N) for storing the power levels of each hunter.
+   - Other variables: O(1) for storing integers and loop variables.
+   
+   Therefore, the overall space complexity is O(M * N).
+
+In summary, the provided algorithm has a time complexity of O(M * N^2) and a space complexity of O(M * N), where M is the number of rows and N is the number of columns in the input array.
