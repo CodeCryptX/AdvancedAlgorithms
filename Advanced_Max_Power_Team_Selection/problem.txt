@@ -1,0 +1,11 @@
+In the world of solo leveling, a new S class Gate has emerged, attracting the attention of Laiba. With excitement, Laiba
+decides to host a rigorous training session for Hunters. A total of M*N hunters arrive at Laiba's session, forming M rows
+of equal size, each containing exactly n individuals. The adventurers are numbered from 1 to n in each row, following
+the order from left to right.
+Eager to assemble an unbeatable team, Laiba plans to select members with a strategic approach. The selection process
+involves choosing adventurers from left to right, ensuring that the column index of each chosen member (excluding the
+first column) is strictly greater than the column index of the previously chosen hunter. To maintain fairness and balance,
+Laiba aims to avoid consecutive selections from the same row. The first hunter can be chosen from any of the M * N
+participants without any additional constraints. The team can accommodate no more than N members.
+You are provided with the power level of each hunter, write an optimal solution of complexity O(N*M) that calculates
+the maximum power that the newly arranged team can have.
